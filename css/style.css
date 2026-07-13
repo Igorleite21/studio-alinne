@@ -17,7 +17,7 @@
   --font-body: 'Jost', sans-serif;
 
   --container: 1180px;
-  --radius: 2px;
+  --radius: 100px;
   --shadow-soft: 0 20px 60px rgba(28, 25, 23, 0.08);
   --shadow-strong: 0 25px 50px rgba(28, 25, 23, 0.18);
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
