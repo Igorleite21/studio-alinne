@@ -18,20 +18,32 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mobile nav toggle
+  // Mobile nav toggle (side drawer)
   var navToggle = document.getElementById('navToggle');
   var mobileNav = document.getElementById('mobileNav');
+  var navBackdrop = document.getElementById('navBackdrop');
+  var mobileNavBack = document.getElementById('mobileNavBack');
+
+  function openMobileNav() {
+    navToggle.classList.add('active');
+    mobileNav.classList.add('active');
+    navBackdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    navToggle.classList.remove('active');
+    mobileNav.classList.remove('active');
+    navBackdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
   navToggle.addEventListener('click', function () {
-    navToggle.classList.toggle('active');
-    mobileNav.classList.toggle('active');
-    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    if (mobileNav.classList.contains('active')) closeMobileNav();
+    else openMobileNav();
   });
+  mobileNavBack.addEventListener('click', closeMobileNav);
+  navBackdrop.addEventListener('click', closeMobileNav);
   mobileNav.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      navToggle.classList.remove('active');
-      mobileNav.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+    a.addEventListener('click', closeMobileNav);
   });
 
   // Menu tabs
