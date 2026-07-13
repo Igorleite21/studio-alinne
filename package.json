@@ -1,0 +1,13 @@
+{
+  "name": "studio-alinne",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site — Studio Alinne Medeiros, Hair Designer",
+  "scripts": {
+    "dev": "serve . -l 5180",
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
