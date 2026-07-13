@@ -339,13 +339,15 @@ h1, h2, h3, h4 {
 }
 .about-visual {
   position: relative;
+}
+.about-photo {
   border-radius: 6px;
   aspect-ratio: 4/5;
   background: linear-gradient(160deg, var(--color-dark) 0%, #3a352f 100%);
   overflow: hidden;
   box-shadow: var(--shadow-strong);
 }
-.about-visual img {
+.about-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
