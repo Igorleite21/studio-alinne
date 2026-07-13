@@ -746,4 +746,7 @@ h1, h2, h3, h4 {
   .menu-note { flex-direction: column; align-items: flex-start; }
   .floating-wa { width: 54px; height: 54px; bottom: 18px; right: 18px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .featured-grid { grid-template-columns: 1fr; max-width: 380px; margin-inline: auto; }
+  .menu-tabs { gap: 8px; }
+  .menu-tab { padding: 10px 16px; font-size: 0.76rem; }
 }
