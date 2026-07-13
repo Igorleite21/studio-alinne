@@ -245,13 +245,13 @@ h1, h2, h3, h4 {
   border-radius: 50%;
 }
 .hero .container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-  align-items: center;
+  max-width: 760px;
+  text-align: center;
   position: relative;
   z-index: 2;
 }
+.hero-badge, .hero-actions, .hero-stats { justify-content: center; }
+.hero p.lead { margin-inline: auto; }
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -292,45 +292,6 @@ h1, h2, h3, h4 {
   color: var(--color-dark);
 }
 .hero-stats div span { font-size: 0.8rem; color: var(--color-text-light); letter-spacing: 0.03em; }
-
-.hero-visual {
-  position: relative;
-  aspect-ratio: 3/4;
-  border-radius: 6px;
-  background:
-    linear-gradient(155deg, #EADFCF 0%, #DCC9B6 45%, #C9A15B 100%);
-  box-shadow: var(--shadow-strong);
-  display: flex;
-  align-items: flex-end;
-  padding: 34px;
-  overflow: hidden;
-}
-.hero-visual::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(120deg, rgba(255,255,255,0.12) 0px, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 42px);
-}
-.hero-visual .visual-card {
-  position: relative;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(6px);
-  padding: 22px 24px;
-  border-radius: 4px;
-  width: 100%;
-  box-shadow: var(--shadow-soft);
-}
-.hero-visual .visual-card p { font-size: 0.85rem; color: var(--color-text-light); }
-.hero-visual .visual-card strong { font-family: var(--font-display); font-size: 1.15rem; color: var(--color-dark); display: block; margin-bottom: 6px; }
-.hero-monogram {
-  position: absolute;
-  top: 30px; left: 30px;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.6rem;
-  color: rgba(255,255,255,0.85);
-}
 
 /* ---------- Marquee strip ---------- */
 .marquee-strip {
@@ -709,9 +670,6 @@ h1, h2, h3, h4 {
 @media (max-width: 860px) {
   .main-nav { display: none; }
   .nav-toggle { display: block; }
-  .header-cta .btn span.btn-label-full { display: none; }
-  .hero .container { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; max-width: 340px; margin: 0 auto 20px; }
   .about .container { grid-template-columns: 1fr; }
   .about-visual { max-width: 320px; margin: 0 auto; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
