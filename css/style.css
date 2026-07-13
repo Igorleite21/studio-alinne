@@ -335,18 +335,14 @@ h1, h2, h3, h4 {
   border-radius: 6px;
   aspect-ratio: 4/5;
   background: linear-gradient(160deg, var(--color-dark) 0%, #3a352f 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   box-shadow: var(--shadow-strong);
 }
-.about-visual span {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 2.2rem;
-  color: rgba(255,255,255,0.9);
-  text-align: center;
-  padding: 40px;
+.about-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 .about-badge {
   position: absolute;
